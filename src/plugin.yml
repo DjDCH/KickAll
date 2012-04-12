@@ -1,0 +1,10 @@
+name: KickAll
+description: Implement the kickall command.
+author: DjDCH
+main: com.djdch.bukkit.kickall.KickAll
+version: 0.1
+
+commands:
+  kickall:
+    description: Kick all the connected players.
+    usage: /<command>
