@@ -1,0 +1,9 @@
+KickAll - Version 0.1
+----------------------------
+    * First release
+    * Build with Bukkit #1438
+    * Tested with CraftBukkit #2149
+    
+    Major features changes
+    -----------------------
+    * Add kickall command
