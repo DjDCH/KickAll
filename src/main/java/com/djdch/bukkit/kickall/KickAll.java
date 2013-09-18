@@ -34,8 +34,8 @@ public class KickAll extends JavaPlugin {
      * @param args Contains the command arguments.
      * @return Return true if a valid command, otherwise false.
      */
-    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("kickall")) {
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (command.getName().equalsIgnoreCase("kickall")) {
             if (args.length != 0) {
                 return false;
             }
