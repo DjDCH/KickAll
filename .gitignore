@@ -1,36 +1,34 @@
-# Eclipse stuff
+# eclipse
 /.classpath
 /.project
 /.settings
 
+# intellij
+/*.iml
+/*.ipr
+/*.iws
+/.idea/
+
 # netbeans
 /nbproject
-
-# we use maven!
-/build.xml
-
-# maven
-/target
 
 # vim
 .*.sw[a-p]
 
-# various other potential build files
+# maven
+/target
+
+# ant
+/build.xml
+
+# other build files
 /build
 /bin
+/classes
 /dist
 /manifest.mf
+/out
 
-/world
-
-# Mac filesystem dust
-/.DS_Store
-
-# intellij
-*.iml
-*.ipr
-*.iws
-.idea/
-
-/src/main/resources/achievement
-/src/main/resources/lang
+# os related files
+.DS_Store
+desktop.ini
