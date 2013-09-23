@@ -3,7 +3,7 @@
 
     <groupId>com.djdch.bukkit</groupId>
     <artifactId>kickall</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <name>KickAll</name>
 
     <properties>
