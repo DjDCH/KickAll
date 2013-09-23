@@ -7,4 +7,11 @@ version: 1.0
 commands:
   kickall:
     description: Kick all the connected players.
-    usage: /<command>
+    usage: /<command> (custom message)
+
+permissions:
+    kickall.*:
+        description: Gives access to all commands
+    kickall.kickall:
+        description: Gives access to kickall command
+        default: op

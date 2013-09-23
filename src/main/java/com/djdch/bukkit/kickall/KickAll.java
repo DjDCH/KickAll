@@ -1,5 +1,8 @@
 package com.djdch.bukkit.kickall;
 
+import org.apache.commons.lang.StringUtils;
+
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -17,6 +20,7 @@ public class KickAll extends JavaPlugin {
      * Method executed when the plugin is enable.
      */
     public void onEnable() {
+        this.saveDefaultConfig();
     }
 
     /**
@@ -36,22 +40,27 @@ public class KickAll extends JavaPlugin {
      */
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("kickall")) {
-            if (args.length != 0) {
-                return false;
+            if (!sender.hasPermission("kickall.kickall")) {
+                sender.sendMessage(ChatColor.RED + "You have no permission to run this command.");
+
+                return true;
             }
 
-            if (!sender.isOp()) {
-                return false;
+            String message = this.getConfig().getString("kickall.message.default");
+
+            if (args.length > 0) {
+                message = StringUtils.join(args, " ");
             }
 
             for (Player player : this.getServer().getOnlinePlayers()) {
-                player.kickPlayer("The server was shutdown. It may attempt to restart soon.");
+                player.kickPlayer(message);
             }
 
             this.getLogger().info("Kicked all connected players");
 
             return true;
         }
+
         return false;
     }
 }
